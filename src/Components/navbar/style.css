@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 100%;
+    height: 150px;
+    background-color: teal;
+}
+
+.inputs{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.inputs>input{
+    min-width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    border: 3px solid orange;
+    padding: 15px 5px;
+    outline: none;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.inputs>input::placeholder{
+    color: #122348;
+}
+.inputs>input:focus{
+    color: teal;
+}
+.inputs>input:focus::placeholder{
+    color: teal;
+}

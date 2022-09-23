@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.crud {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 475px;
+}
+
+.crud-main {
+    width: 700px;
+    height: 400px;
+    overflow: auto;
+    border: 5px solid teal;
+}
+
+.user {
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+    border: 5px solid transparent;
+}
+
+.username {
+    width: 20%;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.user-controls {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.usertitle {
+    width: 100%;
+    height: 5%;
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+    border: 5px solid transparent;
+    font-weight: 900;
+}
+
+.controls-title{
+    padding-left: 50px;
+}
+
+.user-controls>button {
+    padding: 10px;
+    min-width: 100px;
+    font-size: 20px;
+    padding: 5px 30px;
+    text-align: center;
+    border: 4px solid orange;
+    background-color: rgb(34, 196, 196);
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.user-controls>button:hover {
+    transform: scale(1.1);
+}
+
+.user-controls>button:active {
+    transform: scale(1.05);
+}
+
+.userid {
+    font-size: 25px;
+}
