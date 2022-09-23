@@ -26,7 +26,7 @@ class Crud extends Component {
                     </div>
                     {
                         UsersData.map((value,index)=>{
-                          return <User key={valu.id} UsersData={this.state.data} id={value.id} name={value.name} deleteUser={deleteUser}></User>
+                          return <User key={value.id} UsersData={this.state.data} id={value.id} name={value.name} deleteUser={deleteUser}></User>
                     })
                     }
                     
