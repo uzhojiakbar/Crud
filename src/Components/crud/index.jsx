@@ -1,21 +1,15 @@
 import React, { Component } from "react";
 import './style.css'
-import User from "./user";
-import UsersData from "../../Mock/users";
-
 class Crud extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            data: UsersData
+            data: this.props.data,
+            AddName: ""
         }
     }
     render() {
-        let deleteUser = (id) => {
-            // this.state.data.filter({data: (value)=>value.id!==1})
-            let res = UsersData.filter((value, index) => value.id)
-            // this.setState({ data: res })
-        }
+
         return (
             <div className="crud">
                 <div className="crud-main">
@@ -25,17 +19,16 @@ class Crud extends Component {
                         <div className="controls-title">Controls</div>
                     </div>
                     {
-                        UsersData.map((value)=>{
-                        //   return <User key={value.id} UsersData={this.state.data} id={value.id} name={value.name} deleteUser={deleteUser}></User>
-                            <div className="user">
+                        this.props.data.map((value, index) => value.name.toLowerCase() .includes(this.props.FilterTextFuncNav.toLowerCase()) && (
+                            <div key={value.id} className="user">
                                 <div className="userid">
-                                    {value.id}
+                                    {index + 1}
                                 </div>
                                 <div className="username">
                                     {value.name}
                                 </div>
                                 <div className="user-controls">
-                                    <button onClick={() => deleteUser()}>
+                                    <button onClick={() => this.props.deleteUser(value.id)}>
                                         Delete
                                     </button>
                                     <button>
@@ -43,9 +36,9 @@ class Crud extends Component {
                                     </button>
                                 </div>
                             </div>
-                    })
-                    }
-                    
+
+                        ))}
+
                 </div>
             </div>
         )
